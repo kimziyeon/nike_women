@@ -1,0 +1,108 @@
+footer {
+    background-color: white;
+
+}
+
+.foot_about {
+    background-color: #D9D9D9;
+    padding: 20px 0;
+    border-top: 1px solid #818181;
+
+
+    div {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+    p {
+        a {
+            font-weight: 500;
+            color: black;
+            padding: 10px;
+        }
+    }
+}
+
+
+.foot_name {
+    font-weight: 600;
+    margin-right: 10px;
+
+}
+
+
+.foot_name2 {
+    display: none;
+    text-align: center;
+
+    b {
+        font-size: 14px;
+        font-weight: 500;
+        display: block;
+    }
+
+    span {
+        font-size: 11px;
+        font-weight: 400;
+        color: #6C6C6C;
+    }
+
+}
+
+
+
+
+.foot_info_in {
+    width: 80%;
+    margin: 40px 0;
+
+    div {
+        h3 {
+            font-weight: 500;
+        }
+
+        p {
+            margin: 10px 0;
+
+            span {
+                font-size: 11px;
+                font-weight: 400;
+                color: #6C6C6C;
+                margin: 0 6px;
+            }
+        }
+    }
+}
+
+.sns_icon {
+    display: flex;
+
+    a {
+        display: block;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin: 0 6px;
+
+        @for $i from 1 to 5 {
+
+            /*반복문for 4개반복 이름 문자는(#{$i}) */
+            &:nth-of-type(#{$i}) {
+                background: #D9D9D9 url("../img/(kdt)NIKE WOMEN-1/icon_#{$i}.png") center / 60% no-repeat;
+            }
+        }
+
+    }
+}
+
+
+.foot_info_out {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+}

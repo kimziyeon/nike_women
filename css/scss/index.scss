@@ -1,0 +1,40 @@
+@import "./_header.scss";
+@import "./_footer.scss";
+@import "./bar.scss";
+
+
+
+main {
+    p {
+        margin-bottom: 100px;
+
+        img {
+            width: 100%;
+        }
+
+
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        text-align: center;
+        padding: 50px 0;
+    }
+}
+
+.img_arr {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto 110px;
+
+    div {
+        margin: 5px;
+
+        img {
+            width: 100%;
+            margin: 5px 0;
+        }
+    }
+}

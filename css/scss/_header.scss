@@ -1,0 +1,65 @@
+@import url(../css/reset.css);
+@import url(./_mixin.scss);
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 60px 20px;
+    background-color: white;
+
+
+
+    .logo {
+        img {}
+    }
+
+    .search {
+        display: none;
+
+        img {}
+    }
+
+
+}
+
+.head_center {
+    h2 {
+        font-size: 4.5rem;
+        font-weight: 600;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+
+        span {
+            a {
+                font-size: 1.5rem;
+                font-weight: 400;
+                color: black;
+            }
+        }
+    }
+}
+
+.head_right {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        padding: 0 20px;
+
+        img {}
+    }
+
+}
+
+
+.head_right_480 {
+    display: none;
+}

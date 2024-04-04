@@ -64,59 +64,21 @@ $flex-map: (
 }
 
 
+$mob-breakpoint: 430px;
+$tab-breakpoint: 768px;
 
-$s-breakpoint: 430px;
-$m-breakpoint: 600px;
-$l-breakpoint: 768px;
-$xl-breakpoint: 900px;
-$xxl-breakpoint: 1024px;
-$xxxl-breakpoint: 1280px;
-$xxxxl-breakpoint: 1440px;
-
-
-@mixin responsive($screen) {
-    @if ($screen =='s') {
-        @media screen and (max-width: $s-breakpoint) {
+@mixin res($screen) {
+    @if ($screen =='mob') {
+        @media screen and (max-width: $mob-breakpoint) {
             @content;
         }
     }
 
-    @if ($screen =='m') {
-        @media screen and (max-width: $m-breakpoint) {
+    @if ($screen =='tab') {
+        @media screen and (max-width: $tab-breakpoint) {
             @content;
         }
     }
-
-    @if ($screen =='l') {
-        @media screen and (max-width: $l-breakpoint) {
-            @content;
-        }
-    }
-
-    @if ($screen =='xl') {
-        @media screen and (max-width: $xl-breakpoint) {
-            @content;
-        }
-    }
-
-    @if ($screen =='xxl') {
-        @media screen and (max-width: $xxl-breakpoint) {
-            @content;
-        }
-    }
-
-    @if ($screen =='xxxl') {
-        @media screen and (max-width: $xxxl-breakpoint) {
-            @content;
-        }
-    }
-
-    @if ($screen =='xxxxl') {
-        @media screen and (max-width: $xxxxl-breakpoint) {
-            @content;
-        }
-    }
-
 
     @if ($screen) {
         @media screen and (max-width: $screen) {

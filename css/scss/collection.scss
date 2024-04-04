@@ -12,7 +12,11 @@ body {
 
 
 main {
-    div {
+    .collection_480 {
+        display: none;
+    }
+
+    .collection_contents {
         width: 80%;
         margin: 10px auto;
         text-align: center;
@@ -25,7 +29,6 @@ main {
                     width: 100%;
                 }
             }
-
 
             figcaption {
                 color: white;

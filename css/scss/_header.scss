@@ -1,65 +1,106 @@
 @import url(../css/reset.css);
-@import url(./_mixin.scss);
-
-
+@import '../scss/_mixin.scss';
 
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0 60px 20px;
-    background-color: white;
-
-
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2% 5%;
+    @include flexbox(sb, c);
 
     .logo {
-        img {}
+        width: 100px;
+
+        img {
+            width: 100%;
+        }
     }
+
 
     .search {
         display: none;
 
-        img {}
+        img {
+            width: 100%;
+        }
+    }
+
+    @include res(tab) {
+        .logo {
+            width: 50px;
+        }
+    }
+
+    @include res(mob) {
+        .logo {
+            display: none;
+        }
+
+        .search {
+            display: block;
+        }
     }
 
 
-}
 
-.head_center {
-    h2 {
-        font-size: 4.5rem;
-        font-weight: 600;
-    }
+    .head_center {
+        h2 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
 
-    nav {
-        display: flex;
-        justify-content: space-around;
+        nav {
+            @include flexbox(c, c);
+            gap: 30px;
 
-        span {
-            a {
-                font-size: 1.5rem;
-                font-weight: 400;
-                color: black;
+            span {
+                a {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    color: black;
+                }
+            }
+        }
+
+        @include res(tab) {
+            h2 {
+                font-size: 2rem;
+            }
+
+            nav {
+                display: none;
             }
         }
     }
-}
 
-.head_right {
-    display: flex;
-    justify-content: space-between;
+    .head_right {
+        @include flexbox(sb, c);
+        gap: 30px;
 
-    a {
-        padding: 0 20px;
+        a {
+            width: 30px;
 
-        img {}
+            img {
+                width: 100%;
+            }
+        }
+
+        @include res(tab) {
+            display: none;
+        }
+
     }
 
-}
 
+    .head_right_mob {
+        display: none;
 
-.head_right_480 {
-    display: none;
+        @include res(tab) {
+            display: block;
+        }
+
+    }
+
 }

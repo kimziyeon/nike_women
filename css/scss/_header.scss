@@ -27,6 +27,8 @@ header {
     }
 
     @include res(tab) {
+        padding: 5%;
+
         .logo {
             width: 50px;
         }
@@ -70,6 +72,12 @@ header {
             }
 
             nav {
+                display: none;
+            }
+        }
+
+        @include res(mob) {
+            h2 {
                 display: none;
             }
         }

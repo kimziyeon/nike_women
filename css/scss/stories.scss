@@ -4,6 +4,20 @@
 
 
 main {
+    .stories_mob {
+        display: none;
+    }
+
+    @include res(mob) {
+        .stories_mob {
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 20px;
+            font-weight: 300;
+        }
+    }
+
     .main_story_01 {
         text-align: center;
 
@@ -17,22 +31,30 @@ main {
             figcaption {
                 font-size: 28px;
                 font-weight: 400;
-                padding: 30px 0;
+                padding: 30px 10px;
                 margin-bottom: 300px;
             }
         }
     }
 
+    @include res(tab) {
+
+        .main_story_01 {
+            display: none;
+        }
+
+    }
+
     .main_story_02 {
         width: 80%;
         margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-
+        @include flexbox(sb);
 
         p {
             img {
                 width: 100%;
+                height: 60vh;
+                object-fit: cover;
             }
         }
 
@@ -60,7 +82,55 @@ main {
                 font-size: 16px;
                 font-weight: 400;
                 color: #545454;
+                word-break: keep-all;
+            }
 
+            .main_story_mob {
+                display: none;
+            }
+        }
+    }
+
+    @include res(tab) {
+        .main_story_02 {
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+
+            p {
+                img {}
+            }
+
+            >div {
+                width: 100%;
+                margin: 0;
+                padding-left: 10px;
+
+                b {
+                    padding: 20px 0;
+                    font-size: 24px;
+                }
+
+                p,
+                span {
+                    display: none;
+                }
+
+                .main_story_mob {
+                    display: block;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    @include res(mob) {
+        .main_story_02 {
+            p {
+                img {
+                    height: auto;
+                    object-fit: contain;
+                }
             }
         }
     }
@@ -77,9 +147,9 @@ main {
 
         }
 
+
         div {
-            display: flex;
-            justify-content: space-between;
+            @include flexbox(sb);
 
             figure {
                 width: 33%;
@@ -108,48 +178,60 @@ main {
                 }
             }
         }
-
     }
+
+    @include res(tab) {
+
+        .more_story {
+            width: 90%;
+            margin: 0 auto;
+            text-align: left;
+
+            p {
+                padding-left: 10px;
+                font-size: 18px;
+            }
+
+            div {
+                display: none;
+            }
+        }
+    }
+
 }
 
 
 
-
-
-
-
-
-
-.more_story_480 {
+.more_story_grid {
     display: none;
 
-    // @include res($mobile) {
-    //     display: grid; //그리드
-    //     width: 90%;
-    //     margin: 0 auto;
-    //     grid-template-columns: 70% 30%; //왼쪽70% 오른쪽30%
-    //     gap: 5px;
+    @include res(tab) {
+        display: grid; //그리드
+        width: 90%;
+        margin: 30px auto 50px;
+        grid-template-columns: 70% 30%; //왼쪽70% 오른쪽30%
+        gap: 5px;
 
-    //     p:nth-of-type(1) {
-    //         grid-row: 1 / span 2; //왼쪽 1칸에 2개의 그리드(병합)
+        p:nth-of-type(1) {
+            grid-row: 1 / span 2; //왼쪽 1칸에 2개의 그리드(병합)
 
-    //         img {
-    //             width: 100%;
-    //         }
-    //     }
+            img {
+                width: 100%;
+            }
+        }
 
-    //     p:nth-of-type(2) {
-    //         img {
-    //             width: 100%;
-    //             height: 100%;
-    //         }
-    //     }
+        p:nth-of-type(2) {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
 
-    //     p:nth-of-type(3) {
-    //         img {
-    //             width: 100%;
-    //             height: 100%;
-    //         }
-    //     }
-    // }
+        p:nth-of-type(3) {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
 }

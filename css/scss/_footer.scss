@@ -11,22 +11,6 @@ footer {
             width: 80%;
             margin: 0 auto;
 
-            @include res(tab) {
-                .foot_name {
-                    display: none;
-                }
-            }
-
-
-            @include res(mob) {
-                display: block;
-
-                p {
-                    display: none;
-                }
-
-            }
-
             .foot_name {
                 font-size: 14px;
                 font-weight: 600;
@@ -66,6 +50,28 @@ footer {
             }
 
         }
+
+        @include res(tab) {
+            >div {
+                justify-content: center;
+
+                .foot_name {
+                    display: none;
+                }
+            }
+
+            @include res(mob) {
+                display: block;
+
+                p {
+                    display: none;
+                }
+
+            }
+        }
+
+
+
     }
 
     .foot_info_out {

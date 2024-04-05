@@ -125,6 +125,11 @@ footer {
     @include res(tab) {
         .foot_info_out {
             display: block;
+
+            .sns_icon {
+                margin-bottom: 5%;
+
+            }
         }
     }
 

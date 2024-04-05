@@ -1,26 +1,44 @@
 
+const header = document.createElement('header')
+const footer = document.createElement('footer')
+document.body.prepend(header)
+document.body.append(footer)
 
-const menubar = document.querySelector('.menu_bar'),
-    barBtn = document.querySelector('.head_right_mob'),
-    closeX = document.querySelector('.menu_X');
+fetch('./header.html')
+    .then(res => res.text())
+    .then(res => {
+        document.querySelector('header').innerHTML = res;
+        headerFetch();
+    })
 
-barBtn.onclick = function () {
-    menubar.classList.add('active');
-}
+fetch('./footer.html')
+    .then(res => res.text())
+    .then(res => {
+        document.querySelector('footer').innerHTML = res;
+    })
 
-closeX.onclick = function () {
-    menubar.classList.remove('active')
-}
 
-const searchbar = document.querySelector('.search_view'),
-    shBtn = document.querySelector('.search'),
-    closeXsh = document.querySelector('.search_X');
+function headerFetch() {
 
-shBtn.onclick = function () {
-    searchbar.classList.add('active');
-}
+    const menubar = document.querySelector('.menu_back'),
+        barBtn = document.querySelector('.head_right_mob');
 
-closeXsh.onclick = function () {
-    searchbar.classList.remove('active');
+    barBtn.onclick = function () {
+        menubar.classList.toggle('active');
+        barBtn.classList.toggle('active');
+    }
+
+
+    const searchbar = document.querySelector('.search_view'),
+        shBtn = document.querySelector('.search'),
+        closeXsh = document.querySelector('.search_X');
+
+    shBtn.onclick = function () {
+        searchbar.classList.add('active');
+    }
+
+    closeXsh.onclick = function () {
+        searchbar.classList.remove('active');
+    }
 }
 

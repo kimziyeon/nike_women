@@ -2,6 +2,13 @@
 @import "./_footer.scss";
 
 
+@include res(mob) {
+    main {
+        margin-top: 80px;
+    }
+}
+
+
 main {
     .stories_mob {
         display: none;
@@ -198,8 +205,6 @@ main {
     }
 
 }
-
-
 
 .more_story_grid {
     display: none;

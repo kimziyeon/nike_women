@@ -2,6 +2,11 @@
 @import "./_footer.scss";
 
 
+@include res(mob) {
+    main {
+        margin-top: 80px;
+    }
+}
 
 main {
     p {

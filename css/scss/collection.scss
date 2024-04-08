@@ -8,6 +8,13 @@ body {
     background-color: black;
 }
 
+
+@include res(mob) {
+    main {
+        margin-top: 80px;
+    }
+}
+
 main {
     .collection_mob {
         display: none;

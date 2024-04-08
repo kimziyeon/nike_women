@@ -404,7 +404,7 @@ footer .foot_info_out .sns_icon a:nth-of-type(4) {
     display: block;
   }
   footer .foot_info_out .sns_icon {
-    margin-bottom: 5%;
+    padding-bottom: 5%;
   }
 }
 @media screen and (max-width: tab) {
@@ -412,7 +412,7 @@ footer .foot_info_out .sns_icon a:nth-of-type(4) {
     display: block;
   }
   footer .foot_info_out .sns_icon {
-    margin-bottom: 5%;
+    padding-bottom: 5%;
   }
 }
 @media screen and (max-width: 430px) {

@@ -21,24 +21,31 @@ fetch('./footer.html')
 function headerFetch() {
 
     const menubar = document.querySelector('.menu_back'),
-        barBtn = document.querySelector('.head_right_mob');
+        barBtn = document.querySelector('.head_right_mob'),
+        searchbar = document.querySelector('.search_back'),
+        searchBtn = document.querySelector('.search'),
+        searchBtnW = document.querySelector('.search_web');
 
     barBtn.onclick = function () {
-        menubar.classList.toggle('active');
-        barBtn.classList.toggle('active');
+        if (searchbar) {
+            searchbar.classList.remove('active');
+            menubar.classList.toggle('active');
+            barBtn.classList.toggle('active');
+        }
     }
 
 
-    const searchbar = document.querySelector('.search_view'),
-        shBtn = document.querySelector('.search'),
-        closeXsh = document.querySelector('.search_X');
+    searchBtn.onclick = function () {
+        if (menubar) {
+            menubar.classList.remove('active');
+            barBtn.classList.remove('active');
 
-    shBtn.onclick = function () {
-        searchbar.classList.add('active');
+            searchbar.classList.toggle('active');
+        }
     }
 
-    closeXsh.onclick = function () {
-        searchbar.classList.remove('active');
+    searchBtnW.onclick = function () {
+        searchbar.classList.toggle('active');
     }
 }
 

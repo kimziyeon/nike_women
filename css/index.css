@@ -31,29 +31,17 @@ header .logo {
 header .logo img {
   width: 100%;
 }
+header .logo:hover img {
+  opacity: 0.5;
+}
 header .search {
   display: none;
+  padding: 5% 0;
 }
 header .search img {
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-  header {
-    padding: 5%;
-  }
-  header .logo {
-    width: 50px;
-  }
-}
-@media screen and (max-width: tab) {
-  header {
-    padding: 5%;
-  }
-  header .logo {
-    width: 50px;
-  }
-}
-@media screen and (max-width: 430px) {
   header .logo {
     display: none;
   }
@@ -61,7 +49,7 @@ header .search img {
     display: block;
   }
 }
-@media screen and (max-width: mob) {
+@media screen and (max-width: tab) {
   header .logo {
     display: none;
   }
@@ -84,6 +72,9 @@ header .head_center nav span a {
   font-size: 1.4rem;
   font-weight: 400;
   color: black;
+}
+header .head_center nav span:hover {
+  opacity: 0.5;
 }
 @media screen and (max-width: 768px) {
   header .head_center h2 {
@@ -122,6 +113,9 @@ header .head_right a {
 }
 header .head_right a img {
   width: 100%;
+}
+header .head_right a:hover {
+  opacity: 0.5;
 }
 @media screen and (max-width: 768px) {
   header .head_right {
@@ -184,7 +178,7 @@ header .head_right_mob p span {
 }
 .menu_back .menu_bar {
   width: 100%;
-  height: 40%;
+  height: 300px;
   background: #f0f0f0;
   text-align: center;
 }
@@ -196,10 +190,10 @@ header .head_right_mob p span {
   margin: 0 30px;
 }
 .menu_back .menu_bar .menu_02 {
-  padding-top: 5%;
+  padding-top: 20px;
 }
 .menu_back .menu_bar .menu_02 p {
-  margin: 5% 0;
+  margin: 20px 0;
 }
 .menu_back .menu_bar .menu_02 p a {
   font-size: 16px;
@@ -210,40 +204,55 @@ header .head_right_mob p span {
   display: block;
 }
 
-.search_view {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(196, 196, 196, 0.5);
-  top: 0;
+.search_back {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
   left: 0;
+  top: 100%;
+  width: 100%;
+  height: 100vh;
   display: none;
 }
-
-.search_view_web {
-  position: fixed;
-  width: 65%;
-  background-color: rgb(255, 255, 255);
-  top: 20px;
-  left: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 50px;
-}
-.search_view_web p img {
+.search_back .search_view {
   width: 100%;
+  height: 300px;
+  background: #fff;
 }
-.search_view_web input {
-  width: 70%;
-  height: 50px;
-  color: #C2C2C2;
+.search_back .search_view .search_01 {
+  text-align: center;
+  padding: 30px 0;
+  border-bottom: 1px solid #C2C2C2;
+}
+.search_back .search_view .search_01 img {
+  opacity: 0.2;
+  margin: 0 10px;
+}
+.search_back .search_view .search_01 input {
   border: 0;
-  padding-left: 10px;
-  margin: 0 20px;
+  padding: 5px 10px;
+  font-size: 16px;
+  width: 40%;
 }
-.search_view_web a {
-  padding: 5px;
+.search_back .search_view .search_01 input:focus {
+  outline: none;
+}
+.search_back .search_view .search_02 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+}
+.search_back .search_view .search_02 > p {
+  margin: 30px 0;
+  font-weight: 600;
+}
+.search_back .search_view .search_02 a {
+  display: block;
+  color: #000;
+  margin: 10px 0;
+}
+
+.search_back.active {
+  display: block;
 }
 
 footer {

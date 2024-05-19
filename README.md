@@ -1,7 +1,7 @@
 # 나이키 우먼
 <p> 👤 Personal Project ㅣ clone</p>
 <p>
-  🔗 <a href="https://kimziyeon.github.io/nike_women/" target="_blank"> https://kimziyeon.github.io/nike_women/</a>
+  🔗 <a href="https://kimziyeon.github.io/nike_women/" target="_blank"> 배포 링크 바로가기</a>
 </p>
 
 <p>
